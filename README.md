@@ -1,52 +1,124 @@
-# walmart_sales_test
-This project is an end-to-end data analysis solution designed to extract critical business insights from Walmart sales data. We utilize Python for data processing and analysis, SQL for advanced querying, and structured problem-solving techniques to solve key business questions. The project is ideal for data analysts looking to develop skills in data manipulation, SQL querying, and data pipeline creation.
+Walmart Sales Data Analysis
 
-Project Steps
-1. Set Up the Environment
-Tools Used: Visual Studio Code (VS Code), Python, SQL (MySQL)
-Goal: Create a structured workspace within VS Code and organize project folders for smooth development and data handling.
-2. Set Up Kaggle API
-API Setup: Obtain your Kaggle API token from Kaggle by navigating to your profile settings and downloading the JSON file.
-Configure Kaggle:
-Place the downloaded kaggle.json file in your local .kaggle folder.
-Use the command kaggle datasets download -d <dataset-path> to pull datasets directly into your project.
-3. Download Walmart Sales Data
-Data Source: Use the Kaggle API to download the Walmart sales datasets from Kaggle.
-Dataset Link: Walmart Sales Dataset
-Storage: Save the data in the data/ folder for easy reference and access.
-4. Install Required Libraries and Load Data
-Libraries: Install necessary Python libraries using:
-pip install pandas numpy sqlalchemy mysql-connector-python 
-Loading Data: Read the data into a Pandas DataFrame for initial analysis and transformations.
-5. Explore the Data
-Goal: Conduct an initial data exploration to understand data distribution, check column names, types, and identify potential issues.
-Analysis: Use functions like .info(), .describe(), and .head() to get a quick overview of the data structure and statistics.
-6. Data Cleaning
-Remove Duplicates: Identify and remove duplicate entries to avoid skewed results.
-Handle Missing Values: Drop rows or columns with missing values if they are insignificant; fill values where essential.
-Fix Data Types: Ensure all columns have consistent data types (e.g., dates as datetime, prices as float).
-Currency Formatting: Use .replace() to handle and format currency values for analysis.
-Validation: Check for any remaining inconsistencies and verify the cleaned data.
-7. Feature Engineering
-Create New Columns: Calculate the Total Amount for each transaction by multiplying unit_price by quantity and adding this as a new column.
-Enhance Dataset: Adding this calculated field will streamline further SQL analysis and aggregation tasks.
-8. Load Data into MySQL
-Set Up Connections: Connect to MySQL using sqlalchemy and load the cleaned data into each database.
-Table Creation: Set up tables in both MySQL using Python SQLAlchemy to automate table creation and data insertion.
-Verification: Run initial SQL queries to confirm that the data has been loaded accurately.
-9. SQL Analysis: Complex Queries and Business Problem Solving
-Business Problem-Solving: Write and execute complex SQL queries to answer critical business questions, such as:
-Revenue trends across branches and categories.
-Identifying best-selling product categories.
-Sales performance by time, city, and payment method.
-Analyzing peak sales periods and customer buying patterns.
-Profit margin analysis by branch and category.
-Documentation: Keep clear notes of each query's objective, approach, and results.
+This project is an end-to-end data analysis solution designed to extract meaningful business insights from Walmart sales data. It uses Python for data processing and MySQL for advanced SQL queries to solve real-world business problems.
 
-Sales Insights: Key categories, branches with highest sales, and preferred payment methods.
-Profitability: Insights into the most profitable product categories and locations.
-Customer Behavior: Trends in ratings, payment preferences, and peak shopping hours.
+📌 Project Goals
 
-Acknowledgments
-Data Source: Kaggle’s Walmart Sales Dataset
-Inspiration: Walmart’s business case studies on sales and supply chain optimization.
+Clean and preprocess Walmart sales data
+
+Perform SQL-based analysis to identify sales trends, customer behavior, and profit patterns
+
+Develop hands-on skills in Python, Pandas, SQL, and MySQL integration
+
+⚙️ Tools and Technologies
+
+Language: Python 3.8+
+
+IDE: Visual Studio Code
+
+Database: MySQL
+
+Libraries: pandas, numpy, sqlalchemy, mysql-connector-python
+
+Data Source: Kaggle - Walmart Sales Dataset
+
+📁 Project Structure
+
+|-- data/             # Raw and cleaned datasets
+|-- sql_queries/      # SQL scripts for business analysis
+|-- main.py           # Python script for loading and processing data
+|-- requirements.txt  # Python package requirements
+|-- README.md         # Project overview and documentation
+
+🚀 Getting Started
+
+1. Clone the Repository
+
+git clone https://github.com/Sreya262/walmart-sales-analysis.git
+cd walmart-sales-analysis
+
+2. Install Python Dependencies
+
+pip install -r requirements.txt
+
+3. Download Dataset Using Kaggle API
+
+Get your kaggle.json API token from Kaggle
+
+Place it in ~/.kaggle/ or your working directory
+
+kaggle datasets download -d <dataset-name>
+
+4. Run the Project
+
+Execute the main.py script to clean and load data into MySQL
+
+🔍 Project Workflow
+
+1. Environment Setup
+
+Create project folders and organize files in VS Code
+
+2. Data Download & Loading
+
+Download dataset from Kaggle using the API
+
+Read it into Pandas DataFrame for processing
+
+3. Data Cleaning
+
+Remove duplicates
+
+Handle missing values
+
+Format currency and fix data types
+
+4. Feature Engineering
+
+Create new columns such as Total Amount = unit_price * quantity
+
+5. Load Data into MySQL
+
+Use SQLAlchemy to connect to MySQL and upload cleaned data
+
+6. SQL Analysis
+
+Answer business questions like:
+
+Revenue trends by branch and category
+
+Best-selling product categories
+
+Performance by city, time, and payment method
+
+Customer buying patterns and peak hours
+
+📊 Key Insights
+
+Sales Insights: Identified high-performing branches and product categories
+
+Profitability: Found the most profitable branches and categories
+
+Customer Behavior: Analyzed shopping times, ratings, and payment preferences
+
+🔮 Possible Improvements
+
+Add interactive dashboards using Tableau or Power BI
+
+Integrate more data sources for deeper analysis
+
+Automate the data pipeline for regular updates
+
+🪪 License
+
+This project is licensed under the MIT License. You are free to use, modify, and distribute it with proper attribution.
+
+🙏 Acknowledgments
+
+Dataset: Kaggle's Walmart Sales Dataset
+
+Inspiration: Business cases from Walmart’s sales and operations
+
+
+
+
