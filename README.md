@@ -34,7 +34,7 @@ Data Source: Kaggle - Walmart Sales Dataset
 
 1. Clone the Repository
 
-git clone https://github.com/Sreya262/walmart-sales-analysis.git
+git clone https://github.com/Sreya262/walmart-sales-analysis
 cd walmart-sales-analysis
 
 2. Install Python Dependencies
